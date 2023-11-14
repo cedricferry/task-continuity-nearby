@@ -6,12 +6,12 @@ plugins {
 
 android {
   namespace = "com.example.taskscontinuity"
-  compileSdk = 33
+  compileSdk = 34
 
   defaultConfig {
     applicationId = "com.example.taskscontinuity"
     minSdk = 29
-    targetSdk = 33
+    targetSdk = 34
     versionCode = 1
     versionName = "1.0"
 
@@ -28,17 +28,17 @@ android {
     }
   }
   compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
   }
   kotlinOptions {
-    jvmTarget = "1.8"
+    jvmTarget = "17"
   }
   buildFeatures {
     compose = true
   }
   composeOptions {
-    kotlinCompilerExtensionVersion = "1.4.3"
+    kotlinCompilerExtensionVersion = "1.5.3"
   }
   packaging {
     resources {
@@ -58,12 +58,12 @@ dependencies {
   implementation(libs.ui.tooling.preview)
   implementation(libs.material3)
   implementation(libs.nearby)
-  implementation(files("libs/graphics-core-1.0.0-20230608.170632-1.aar"))
   implementation(libs.androidx.camera.lifecycle)
   implementation(libs.androidx.camera.camera2)
   implementation(libs.androidx.camera.video)
   implementation("androidx.concurrent:concurrent-futures-ktx:1.1.0")
   implementation(libs.androidx.camera.view)
+  implementation(libs.androidx.graphics.core)
 
   testImplementation(libs.junit)
   androidTestImplementation(libs.androidx.test.ext.junit)
